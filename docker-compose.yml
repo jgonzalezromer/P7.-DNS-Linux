@@ -1,0 +1,27 @@
+services:
+  DNS:
+    image: internetsystemsconsortium/bind9:9.18
+    container_name: DNS_P7
+    ports:
+      - 54:53/udp
+      - 54:53/tcp
+      - 127.0.0.1:953:953/tcp
+    restart: always
+    networks:
+      P7_network:
+        ipv4_address: 172.18.0.1
+  Cliente:
+    image: alpine
+    container_name: Cliente_P7
+    tty: true
+    stdin_open: true
+    dns:
+      - 172.18.0.2
+networks:
+  P7_network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.18.0.0/16
+          ip_range: 172.18.0.0/24
+          gateway: 172.18.0.254
