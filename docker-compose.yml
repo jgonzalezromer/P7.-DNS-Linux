@@ -19,6 +19,7 @@ services:
     container_name: Cliente_P7
     tty: true
     stdin_open: true
+    command: /bin/sh -c "apk update && apk add bind-tools"
     networks:
       P7_network:
         ipv4_address: 172.18.0.2
