@@ -90,7 +90,8 @@ O named.conf o utilizaremos para chamar a outros archivos(como se fora unha func
 include "/etc/bind/named.conf.options";
 include "/etc/bind/named.conf.local";
 ```
-
+> [!IMPORTANT]
+> Para ver a estructura dos documentos e os arquivos en sí están neste mesmo repositorio
 ---
 ### named.conf.options
 Este arquivo sirve para indicar as opcións do servidor DNS nel introduciremos o codigo:
