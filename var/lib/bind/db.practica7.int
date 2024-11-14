@@ -1,0 +1,13 @@
+$TTL 86400 ;
+@ IN SOA ns.practica7.in some.email.address. (
+2024111401 ; Serial
+3600 ; Refresh
+1800 ; Retry
+36000 ; Expire
+86400 ; Minimum TTL
+)
+@ IN NS ns.practica7.int.
+ns IN A 172.18.0.1 
+www IN A 172.18.0.3 
+alias IN CNAME www 
+texto IN TXT "Rexistro TXT de exemplo" 

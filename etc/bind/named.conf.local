@@ -1,0 +1,7 @@
+zone "practica7.int" {
+	type master;
+        file "/var/lib/bind/db.practica7.int";
+        allow-query {
+                any;
+                };
+	};
