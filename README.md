@@ -67,7 +67,7 @@ services:
     container_name: Cliente_P7 #Nome do container
     tty: true 
     stdin_open: true
-    command: /bin/sh -c "apk update && apk add bind-tools" #Comando para que instale dig ao iniciar os contenedores
+    command: /bin/sh -c "apk update && apk add bind-tools && /bin/sh" #Comando para que instale dig ao iniciar os contenedores
     networks:
       P7_network:  #Rede que utilizará
         ipv4_address: 172.18.0.2 #IP que utilizará
